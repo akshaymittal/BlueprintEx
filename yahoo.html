@@ -1,9 +1,27 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>Yahoo! Layout</title>
-<link rel="stylesheet" type="text/css" href="blueprint/screen.css" media="screen">
-<link rel="stylesheet" type="text/css" href="blueprint/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="blueprint/screen.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="blueprint/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.8.13.custom.css" />
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#panel1").click(function(){
+       $("#sports").slideToggle("slow");
+    });
+    $("#panel2").click(function(){
+        $("#news").slideToggle("slow");
+       
+    });
+    $("#panel3").click(function(){
+       $("#tourop").slideToggle("slow"); 
+    });
+     $("#tabs").tabs(); 
+});
+</script>
 </head>
 <body style="background-color: gray;">
     <div class="container">
@@ -13,7 +31,7 @@
         </div>
         <div class="span-24 last gray" id="sub-header" style="margin-bottom: 10px; padding-top: 5px;">
             <div class="column span-10 white" style="margin: 0 5 5 5;">
-                <img src="images/yahoo.JPG" style="height: 100; width: 300;"/>
+                <img src="images/yahoo.JPG" style="height: 100px; width: 300px;" />
             </div>
             <div class="column span-14 last" style="padding-top: 35px;">
                 <div style="margin-left: 100px;">
@@ -33,26 +51,69 @@
                     <h3>Today</h3><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 </div>
                 <div class="white" id="stories" style="margin-bottom: 7px;">
-                    <h3>Top Stories.!!</h3><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#tab1">Finance</a></li>
+                            <li><a href="#tab2">Cricket</a></li>
+                            <li><a href="#tab3">Entertainment</a></li>
+                        </ul>
+                        <div id="tab1">
+                            <ul>
+                                <li>PM hopeful of 8.5 per cent growth in current fiscal</li>
+                                <li>Unitech's FY11 profit falls 16</li>
+                                <li>Reckitt Benckiser looks to sell Paras's personal care biz</li>
+                                <li>Lagarde has G8 backing; hits back at inquiry call</li>
+                            </ul>
+                        </div>
+                        <div id="tab2">
+                            <ul>
+                                <li>Afridi blames 'particular lobby' in PCB for his decision</li>
+                                <li>Strauss savours 'bonus' win despite Anderson absence</li>
+                                <li>Waqar salutes Pakistan as Afridi fall-out looms</li>
+                                <li>Dilshan promises to keep calm and carry on Scorecard</li>
+                            </ul>
+                        </div>
+                        <div id="tab3">
+                            <ul>
+                            <li>Forgotten film with Chaplin could fetch fortune</li>
+                            <li>Who'll play Aishwarya's Hero?</li>
+                            <li>Here comes Big B on his Harley!</li>
+                            <li>Slow and steady Asin takes it easy in B-Town</li>
+                            </ul> 
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="white" id="checkout">
                     <h3>Check it out!</h3><br /><br />
                 </div>
             </div> 
             <div class="column span-8 last" id="content-3">
-                <div class="white" id="sports-trends" style="margin-bottom: 7px;">
+                <div class="white" id="sports" style="margin-bottom: 2px  ;display: none;">
                     <h3>Sports Trendz</h3><br /><br /><br /><br /><br />
                 </div>
-                <div>    
-                    <img src="images/emirates.JPG" style="height: 100; width: 100; margin-bottom: 7px; position: fixed; top: 100px; right:0px ;">
-                    <img src="images/turkish.JPG" style="height: 100; width: 100; margin-bottom: 7px; position: fixed; top: 210px; right:0px ;">
-                    <img src="images/singapre.JPG" style="height: 100; width: 100; margin-bottom: 7px; position: fixed; top: 320px; right:0px ;">
+                <div id="panel1" style="cursor: pointer;">
+                    <p class="white" style="margin-bottom 7px: ;"><b>Show/Hide Sports Panel</b><br /></p>
                 </div>
-                <div class="white" id="news" style="margin-bottom: 7px ;">
+                <div>    
+                    <img src="images/emirates.JPG" style="height: 50px; width: 50px; margin-bottom: 7px; position: fixed; top: 100px; right:0px ;" />
+                    <img src="images/turkish.JPG" style="height: 50px; width: 50px; margin-bottom: 7px; position: fixed; top: 160px; right:0px ;" />
+                    <img src="images/singapre.JPG" style="height: 50px; width: 50px; margin-bottom: 7px; position: fixed; top: 220px; right:0px ;" />
+                </div>
+                
+                <div class="white" id="news" style="margin-bottom: 2px ; display: none;">
                     <h3>News Makers</h3><br /><br /><br /><br />
                 </div>
-                <div class="white" id="tourop">
+                
+                <div id="panel2" style="cursor: pointer;">
+                    <p class="white" style="margin-bottom 7px: ;"><b>Show/Hide News Panel</b><br /></p>
+                </div>
+                
+                <div class="white" id="tourop" style="margin-bottom: 2px;display: none;">
                     <h3>Tour Operators</h3><br /><br /><br /><br />
+                </div>
+                <div id="panel3" style="cursor: pointer;">
+                    <p class="white" style="margin-bottom 7px: ;"><b>Show/Hide Sports Panel</b><br /></p>
                 </div>
             </div>
         </div>
